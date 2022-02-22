@@ -14,7 +14,7 @@ app.use(cors());
 
 app.use('/services', serviceRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://khwan:test1234@cluster0.zdgic.mongodb.net/myFirstDatabase';//?retryWrites=true&w=majority';
+const CONNECTION_URL = 'mongodb+srv://<username>:<password>@cluster0.zdgic.mongodb.net/myFirstDatabase';
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
